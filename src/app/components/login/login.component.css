@@ -1,0 +1,24 @@
+.container {
+    height: 100%;
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(26,67,210,1) 0%, rgba(66,178,210,1) 74%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    width: 30rem;
+    margin: auto;
+    background-color: rgba(235, 235, 235);
+    padding: 4rem 1rem;
+    border-radius: 1rem;    
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+}
+
+.full-width {
+    width: 100%;
+}
