@@ -34,6 +34,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ProdutoListComponent } from './components/produto/produto-list/produto-list.component';
 import { LoginComponent } from './components/login/login.component';
 import { ToastrModule } from 'ngx-toastr';
+import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 /*import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { TecnicoListComponent } from './components/tecnico/tecnico-list/tecnico-list.component';
@@ -102,13 +103,13 @@ import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-
     MatListModule,
     MatCardModule,
     ToastrModule.forRoot({
-      timeOut: 4000,
+      timeOut: 5000,
       closeButton: true,
       progressBar: true
     })
     //NgxMaskModule.forRoot()
   ],
-  providers: [],
+  providers: [AuthInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
