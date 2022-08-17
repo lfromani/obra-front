@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
       this.service.successFullLogin(resposta.headers.get('Authorization').substring(7));
       this.router.navigate(['']);
     }, () => {
-      this.toast.error('Login e/ou senha inválidos!');
+      this.toast.warning('Login e/ou senha inválidos!');
       this.creds.login = '';
       this.creds.senha = '';
     })
