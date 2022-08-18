@@ -1,7 +1,7 @@
-.container {
-    display: flex;
-    align-items: flex-end;
-    justify-content: end;
+/*.container {
+    display: inline;
+    align-items: center;
+    justify-content: center;
 }
 
 h3 {
@@ -9,4 +9,4 @@ h3 {
     border: 1px solid rgb(161, 159, 159);
     padding: 0.3rem;
     border-radius: 1rem;    
-}
+}*/
