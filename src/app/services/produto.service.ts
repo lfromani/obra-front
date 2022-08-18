@@ -14,4 +14,8 @@ export class ProdutoService {
   findAll(): Observable<Produto[]> {
     return this.http.get<Produto[]>(`${API_CONFIG.baseUrl}/produtos`);
   }
+
+  create(produto: Produto): Observable<Produto> {
+    return this.http.post<Produto>(`${API_CONFIG.baseUrl}/produtos`, produto);
+  }
 }
