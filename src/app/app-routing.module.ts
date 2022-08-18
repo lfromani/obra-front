@@ -4,6 +4,7 @@ import { AuthGuard } from './auth/auth.guard';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavComponent } from './components/nav/nav.component';
+import { ProdutoCreateComponent } from './components/produto/produto-create/produto-create.component';
 import { ProdutoListComponent } from './components/produto/produto-list/produto-list.component';
 
 const routes: Routes = [
@@ -13,7 +14,8 @@ const routes: Routes = [
   {
     path: '', component: NavComponent, canActivate: [AuthGuard], children: [
       { path: 'home', component: HomeComponent },
-      { path: 'produtos', component: ProdutoListComponent }
+      { path: 'produtos', component: ProdutoListComponent },
+      { path: 'produtos/create', component: ProdutoCreateComponent }
     ]
   },
 ];

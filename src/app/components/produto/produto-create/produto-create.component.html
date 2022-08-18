@@ -1,0 +1,40 @@
+<div class="container mat-elevation-z6">
+    
+    <form class="form">
+        <h2 class="fullWidth"></h2>
+
+        <div class="row">
+            <mat-form-field class="input-width-10" appearance="fill">
+                <mat-label>Código</mat-label>
+                <input type="number" matInput>
+              </mat-form-field>
+    
+              <mat-form-field class="input-width-78" appearance="fill">
+                <mat-label>Descrição</mat-label>
+                <input matInput placeholder="Produto">
+              </mat-form-field>
+        </div>        
+
+        <div class="row">
+          <mat-form-field class="input-width-20" appearance="fill">
+            <mat-label>Quantidade</mat-label>
+            <input type="number" matInput placeholder="0,00">
+          </mat-form-field>
+
+          <mat-form-field class="input-width-20" appearance="fill">
+            <mat-label>Preço</mat-label>
+            <input type="number" matInput placeholder="0,00">
+          </mat-form-field>
+
+          <mat-form-field class="input-width-20" appearance="fill">
+            <mat-label>Data Cadastro</mat-label>
+            <input type="date" matInput disabled="true">
+          </mat-form-field>
+        </div>
+
+        <button class="mat-elevation-z2" mat-flat-button color="primary">Salvar</button>
+        <button class="mat-elevation-z2" mat-flat-button color="warn">Cancelar</button>
+
+    </form>
+
+</div>
