@@ -38,9 +38,8 @@ import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 import { ProdutoCreateComponent } from './components/produto/produto-create/produto-create.component';
 import { NgxMaskModule } from 'ngx-mask';
 import { ProdutoUpdateComponent } from './components/produto/produto-update/produto-update.component';
+import { ProdutoDeleteComponent } from './components/produto/produto-delete/produto-delete.component';
 /*
-import { TecnicoUpdateComponent } from './components/tecnico/tecnico-update/tecnico-update.component';
-import { TecnicoDeleteComponent } from './components/tecnico/tecnico-delete/tecnico-delete.component';
 import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
 import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
 import { ClienteListComponent } from './components/cliente/cliente-list/cliente-list.component';
@@ -60,14 +59,8 @@ import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-
     LoginComponent,
     ProdutoCreateComponent,
     ProdutoUpdateComponent,
-    /*HomeComponent,
-    HeaderComponent,
-    TecnicoListComponent,
-    LoginComponent,
-    TecnicoCreateComponent,
-    TecnicoUpdateComponent,
-    TecnicoDeleteComponent,
-    ClienteCreateComponent,
+    ProdutoDeleteComponent,
+/*    ClienteCreateComponent,
     ClienteDeleteComponent,
     ClienteListComponent,
     ClienteUpdateComponent,
