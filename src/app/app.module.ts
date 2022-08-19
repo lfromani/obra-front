@@ -37,6 +37,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 import { ProdutoCreateComponent } from './components/produto/produto-create/produto-create.component';
 import { NgxMaskModule } from 'ngx-mask';
+import { ProdutoUpdateComponent } from './components/produto/produto-update/produto-update.component';
 /*
 import { TecnicoUpdateComponent } from './components/tecnico/tecnico-update/tecnico-update.component';
 import { TecnicoDeleteComponent } from './components/tecnico/tecnico-delete/tecnico-delete.component';
@@ -58,6 +59,7 @@ import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-
     ProdutoListComponent,
     LoginComponent,
     ProdutoCreateComponent,
+    ProdutoUpdateComponent,
     /*HomeComponent,
     HeaderComponent,
     TecnicoListComponent,
