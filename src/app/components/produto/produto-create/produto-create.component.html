@@ -1,15 +1,22 @@
 <div class="container mat-elevation-z6">
     
     <form class="form">
-        <h2 class="fullWidth"></h2>
+        <h2 class="fullWidth">Cadastro de Produto</h2>
+
+        <mat-divider></mat-divider>
 
         <div class="row">
-            <mat-form-field class="input-width-10" appearance="fill">
+            <mat-form-field class="input-width-10" appearance="outline">
                 <mat-label>Código</mat-label>
-                <input type="number" matInput>
-              </mat-form-field>
+                <input 
+                disabled="true"
+                [(ngModel)]="produto.idProduto"
+                name="idProduto"
+                type="number" 
+                matInput>
+            </mat-form-field>
     
-              <mat-form-field class="input-width-78" appearance="fill">
+            <mat-form-field class="input-width-80" appearance="outline">
                 <mat-label>Descrição</mat-label>
                 <input 
                 [(ngModel)]="produto.descricao"
@@ -18,11 +25,11 @@
                 required
                 matInput 
                 placeholder="Produto">
-              </mat-form-field>
+            </mat-form-field>
         </div>        
 
         <div class="row">
-          <mat-form-field class="input-width-20" appearance="fill">
+          <mat-form-field class="input-width-30" appearance="outline">
             <mat-label>Quantidade</mat-label>
             <input 
             [(ngModel)]="produto.quantidade"
@@ -32,7 +39,7 @@
             placeholder="0,00">
           </mat-form-field>
 
-          <mat-form-field class="input-width-20" appearance="fill">
+          <mat-form-field class="input-width-30" appearance="outline">
             <mat-label>Preço</mat-label>
             <input 
             [(ngModel)]="produto.preco"
@@ -42,7 +49,7 @@
             placeholder="0,00">
           </mat-form-field>
 
-          <mat-form-field class="input-width-20" appearance="fill">
+          <mat-form-field class="input-width-30" appearance="outline">
             <mat-label>Data Cadastro</mat-label>
             <input 
             [(ngModel)]="produto.dataCadastro"
@@ -52,7 +59,7 @@
             disabled="true">
           </mat-form-field>
         </div>
-
+      
         <button (click)="create()" [disabled]="!validaCampos()" class="mat-elevation-z2" mat-flat-button color="primary">Salvar</button>
         <button routerLink="../" class="mat-elevation-z2" mat-stroked-button color="warn">Cancelar</button>
 

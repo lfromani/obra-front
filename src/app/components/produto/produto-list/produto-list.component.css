@@ -1,6 +1,9 @@
-.container {
-    width: 90%;
+.container {    
     margin: auto;
+    width: 95%;
+    border-radius: .4rem;
+    padding: 1rem 1rem 1rem 1rem;
+    background-color: white;
 }
 
 table {
@@ -16,5 +19,5 @@ mat-form-field {
 }
 
 .delete {
-    color: red;
+    color: rgb(223, 16, 16);
 }
