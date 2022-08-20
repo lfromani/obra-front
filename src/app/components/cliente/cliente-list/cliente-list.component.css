@@ -1,0 +1,23 @@
+.container {    
+    margin: auto;
+    width: 95%;
+    border-radius: .4rem;
+    padding: 1rem 1rem 1rem 1rem;
+    background-color: white;
+}
+
+table {
+    width: 100%;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+.edit {
+    color: black;
+}
+
+.delete {
+    color: rgb(223, 16, 16);
+}

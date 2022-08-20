@@ -1,7 +1,7 @@
 <div class="container mat-elevation-z6">
     
     <form class="form">
-        <h2 class="fullWidth">Cadastro de Produto</h2>
+        <h2 class="fullWidth">Cadastro de Cliente</h2>
 
         <mat-divider></mat-divider>
 
@@ -10,48 +10,38 @@
               <mat-label>Código</mat-label>
               <input 
               disabled="true"
-              [(ngModel)]="produto.idProduto"
-              name="idProduto"
+              [(ngModel)]="cliente.idCliente"
+              name="idCliente"
               type="number" 
               matInput>
           </mat-form-field>
 
           <mat-form-field appearance="outline">
-              <mat-label>Descrição</mat-label>
+              <mat-label>Nome</mat-label>
               <input 
-              [(ngModel)]="produto.descricao"
-              name="descricao"
-              [formControl]="descricao"
+              [(ngModel)]="cliente.nome"
+              name="nome"
+              [formControl]="nome"
               required
               matInput 
-              placeholder="Produto">
+              placeholder="Cliente">
           </mat-form-field>
         </div>
 
         <mat-form-field appearance="outline">
-          <mat-label>Quantidade</mat-label>
+          <mat-label>CPF</mat-label>
           <input 
-          [(ngModel)]="produto.quantidade"
-          name="quantidade"
+          [(ngModel)]="cliente.cpf"
+          name="cpf"
           type="number" 
           matInput 
-          placeholder="0,00">
-        </mat-form-field>
-
-        <mat-form-field appearance="outline">
-          <mat-label>Preço</mat-label>
-          <input 
-          [(ngModel)]="produto.preco"
-          name="preco"
-          type="number" 
-          matInput 
-          placeholder="0,00">
+          placeholder="000.000.000-00">
         </mat-form-field>
 
         <mat-form-field appearance="outline">
           <mat-label>Data Cadastro</mat-label>
           <input 
-          [(ngModel)]="produto.dataCadastro"
+          [(ngModel)]="cliente.dataCadastro"
           name="dataCadastro"
           type="date" 
           matInput 

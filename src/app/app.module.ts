@@ -31,20 +31,21 @@ import { MatCardModule } from '@angular/material/card';
 import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
-import { ProdutoListComponent } from './components/produto/produto-list/produto-list.component';
 import { LoginComponent } from './components/login/login.component';
 import { ToastrModule } from 'ngx-toastr';
 import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
-import { ProdutoCreateComponent } from './components/produto/produto-create/produto-create.component';
 import { NgxMaskModule } from 'ngx-mask';
+
+import { ProdutoCreateComponent } from './components/produto/produto-create/produto-create.component';
+import { ProdutoListComponent } from './components/produto/produto-list/produto-list.component';
 import { ProdutoUpdateComponent } from './components/produto/produto-update/produto-update.component';
 import { ProdutoDeleteComponent } from './components/produto/produto-delete/produto-delete.component';
-/*
 import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
 import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
 import { ClienteListComponent } from './components/cliente/cliente-list/cliente-list.component';
 import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
-import { ChamadoListComponent } from './components/chamado/chamado-list/chamado-list.component';
+
+/*import { ChamadoListComponent } from './components/chamado/chamado-list/chamado-list.component';
 import { ChamadoCreateComponent } from './components/chamado/chamado-create/chamado-create.component';
 import { ChamadoUpdateComponent } from './components/chamado/chamado-update/chamado-update.component';
 import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-read.component';*/
@@ -60,11 +61,11 @@ import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-
     ProdutoCreateComponent,
     ProdutoUpdateComponent,
     ProdutoDeleteComponent,
-/*    ClienteCreateComponent,
+    ClienteCreateComponent,
     ClienteDeleteComponent,
     ClienteListComponent,
     ClienteUpdateComponent,
-    ChamadoListComponent,
+    /*ChamadoListComponent,
     ChamadoCreateComponent,
     ChamadoUpdateComponent,
     ChamadoReadComponent*/
