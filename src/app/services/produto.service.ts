@@ -26,4 +26,8 @@ export class ProdutoService {
   update(produto: Produto): Observable<Produto> {
     return this.http.put<Produto>(`${API_CONFIG.baseUrl}/produtos/${produto.idProduto}`, produto);
   }
+
+  delete(id: any): Observable<Produto> {
+    return this.http.delete<Produto>(`${API_CONFIG.baseUrl}/produtos/${id}`);
+  }
 }

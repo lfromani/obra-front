@@ -11,7 +11,7 @@ import { ProdutoService } from 'src/app/services/produto.service';
   styleUrls: ['./produto-delete.component.css']
 })
 export class ProdutoDeleteComponent implements OnInit {
- 
+   
   produto: Produto = {
     idProduto: '',
     descricao: '',
@@ -39,8 +39,8 @@ export class ProdutoDeleteComponent implements OnInit {
   }
 
   delete(): void {
-    this.service.update(this.produto.idProduto).subscribe(() => {
-      this.toast.success('Atualizado com sucesso!', 'Produto');
+    this.service.delete(this.produto.idProduto).subscribe(() => {
+      this.toast.success('Excluído com sucesso!', 'Produto');
       this.router.navigate(['produtos']);
     }, ex => {
       if (ex.error.errors) {
