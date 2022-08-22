@@ -26,6 +26,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 // Componentes do projeto
 import { NavComponent } from './components/nav/nav.component';
@@ -46,8 +47,7 @@ import { ClienteListComponent } from './components/cliente/cliente-list/cliente-
 import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
 import { ObraListComponent } from './components/obra/obra-list/obra-list.component';
 
-/*import { ChamadoListComponent } from './components/chamado/chamado-list/chamado-list.component';
-import { ChamadoCreateComponent } from './components/chamado/chamado-create/chamado-create.component';
+/*import { ChamadoCreateComponent } from './components/chamado/chamado-create/chamado-create.component';
 import { ChamadoUpdateComponent } from './components/chamado/chamado-update/chamado-update.component';
 import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-read.component';*/
 
@@ -74,6 +74,7 @@ import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-
   ],
   imports: [
     BrowserModule,
+    FlexLayoutModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     // Forms

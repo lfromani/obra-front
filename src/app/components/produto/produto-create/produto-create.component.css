@@ -23,10 +23,6 @@ h2 {
     width: 30%;    
 }
 
-.flex-container {    
-    flex-grow: 8;
-}
-
 mat-divider {
     margin-bottom: 20px;
 }

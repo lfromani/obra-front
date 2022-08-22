@@ -5,8 +5,8 @@
 
         <mat-divider></mat-divider>
 
-        <div class="flex-container">
-          <mat-form-field appearance="outline">
+        <div fxLayout="row" fxLayoutGap="20px">
+          <mat-form-field fxFlex="10" appearance="outline">
               <mat-label>Código</mat-label>
               <input 
               disabled="true"
@@ -16,7 +16,7 @@
               matInput>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field fxFlex="70" appearance="outline">
               <mat-label>Descrição</mat-label>
               <input 
               [(ngModel)]="produto.descricao"
