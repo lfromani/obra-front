@@ -8,7 +8,9 @@ import { ClienteUpdateComponent } from './components/cliente/cliente-update/clie
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavComponent } from './components/nav/nav.component';
+import { ObraCreateComponent } from './components/obra/obra-create/obra-create.component';
 import { ObraListComponent } from './components/obra/obra-list/obra-list.component';
+import { ObraUpdateComponent } from './components/obra/obra-update/obra-update.component';
 import { ProdutoCreateComponent } from './components/produto/produto-create/produto-create.component';
 import { ProdutoDeleteComponent } from './components/produto/produto-delete/produto-delete.component';
 import { ProdutoListComponent } from './components/produto/produto-list/produto-list.component';
@@ -21,6 +23,7 @@ const routes: Routes = [
   {
     path: '', component: NavComponent, canActivate: [AuthGuard], children: [
       { path: 'home', component: HomeComponent },
+      
       { path: 'produtos', component: ProdutoListComponent },
       { path: 'produtos/create', component: ProdutoCreateComponent },
       { path: 'produtos/update/:idProduto', component: ProdutoUpdateComponent },
@@ -32,6 +35,8 @@ const routes: Routes = [
       { path: 'clientes/delete/:idProduto', component: ClienteDeleteComponent },
 
       { path: 'obras', component: ObraListComponent },
+      { path: 'obras/create', component: ObraCreateComponent },
+      { path: 'obras/update/:idObra', component: ObraUpdateComponent },
     ]
   },
 ];

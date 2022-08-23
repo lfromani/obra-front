@@ -1,0 +1,8 @@
+.container {
+    margin: auto;
+    width: 95%;    
+    border-radius: .4rem;
+    padding: 1rem 1rem 1rem 1rem;
+    background-color: white;   
+    word-wrap: break-word;   
+}

@@ -1,0 +1,62 @@
+<div class="container mat-elevation-z6">
+    
+    <h2 class="fullWidth">Cadastro de Obra</h2>
+
+    <form class="form">       
+
+        <mat-divider></mat-divider>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Código</mat-label>
+            <input 
+            [formControl]=""
+            matInput>
+        </mat-form-field>  
+
+        <mat-form-field appearance="outline">
+          <mat-label>Descrição</mat-label>
+          <input 
+          
+          matInput>
+      </mat-form-field> 
+        
+        <div class="status-prioridade">
+            <mat-form-field appearance="outline">
+                <mat-label>Status</mat-label>
+                <mat-select>
+                  <mat-option value="0">ABERTO</mat-option>
+                  <mat-option value="1">EM ANDAMENTO</mat-option>
+                  <mat-option value="2">CONCLUÍDO</mat-option>
+                </mat-select>
+              </mat-form-field>
+
+              <mat-form-field appearance="outline">
+                <mat-label>Prioridade</mat-label>
+                <mat-select>
+                  <mat-option value="0">BAIXA</mat-option>
+                  <mat-option value="1">MÉDIA</mat-option>
+                  <mat-option value="2">ALTA</mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div>
+
+        <div class="cliente">
+            <mat-form-field appearance="outline">
+                <mat-label>Cliente</mat-label>
+                <mat-select>
+                  <mat-option *ngFor="let cliente of clientes" value="{{ cliente.idCliente }}">{{ cliente.nome }}</mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div>     
+        
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Observações</mat-label>
+            <textarea matInput placeholder="Observações..."></textarea>
+        </mat-form-field>
+
+        <button (click)="create()" [disabled]="!validaCampos()" class="mat-elevation-z2" mat-flat-button color="primary">Salvar</button>
+        <button routerLink="../" class="mat-elevation-z2" mat-stroked-button color="warn">Cancelar</button>
+
+    </form>
+
+</div>

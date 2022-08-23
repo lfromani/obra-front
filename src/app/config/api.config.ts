@@ -1,4 +1,4 @@
 export const API_CONFIG = {
-    baseUrl: 'https://obra-prod.herokuapp.com'
-    //baseUrl: 'localhost:8080'
+    //baseUrl: 'https://obra-prod.herokuapp.com'
+    baseUrl: 'http://localhost:8080'
 }

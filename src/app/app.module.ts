@@ -46,6 +46,8 @@ import { ClienteDeleteComponent } from './components/cliente/cliente-delete/clie
 import { ClienteListComponent } from './components/cliente/cliente-list/cliente-list.component';
 import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
 import { ObraListComponent } from './components/obra/obra-list/obra-list.component';
+import { ObraCreateComponent } from './components/obra/obra-create/obra-create.component';
+import { ObraUpdateComponent } from './components/obra/obra-update/obra-update.component';
 
 /*import { ChamadoCreateComponent } from './components/chamado/chamado-create/chamado-create.component';
 import { ChamadoUpdateComponent } from './components/chamado/chamado-update/chamado-update.component';
@@ -67,6 +69,8 @@ import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-
     ClienteListComponent,
     ClienteUpdateComponent,
     ObraListComponent,
+    ObraCreateComponent,
+    ObraUpdateComponent,
     /*ChamadoListComponent,
     ChamadoCreateComponent,
     ChamadoUpdateComponent,

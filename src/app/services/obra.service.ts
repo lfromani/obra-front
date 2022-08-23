@@ -13,5 +13,9 @@ export class ObraService {
 
   findAll(): Observable<Obra[]> {
     return this.http.get<Obra[]>(`${API_CONFIG.baseUrl}/obras`);
-  } 
+  }
+
+  create(obra: Obra): Observable<Obra> {
+    return this.http.post<Obra>(`${API_CONFIG.baseUrl}/obras`, obra);
+  }
 }
