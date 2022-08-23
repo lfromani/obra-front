@@ -10,15 +10,26 @@
     width: 30rem;
     margin: auto;
     background-color: rgba(235, 235, 235);
-    padding: 4rem 1rem;
+    padding: 3rem;
     border-radius: 1rem;    
-}
-
-h1 {
-    width: 100%;
-    text-align: center;
 }
 
 .full-width {
     width: 100%;
+}
+
+button {
+    height: 3rem;
+    font-size: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    margin-top: 2rem;
+    margin-bottom: -1.5rem;
+    float: right;
+    opacity: .6;
 }
