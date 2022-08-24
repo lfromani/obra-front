@@ -48,6 +48,10 @@ import { ClienteUpdateComponent } from './components/cliente/cliente-update/clie
 import { ObraListComponent } from './components/obra/obra-list/obra-list.component';
 import { ObraCreateComponent } from './components/obra/obra-create/obra-create.component';
 import { ObraUpdateComponent } from './components/obra/obra-update/obra-update.component';
+import { UnidadeMedidaListComponent } from './components/unidadeMedida/unidade-medida-list/unidade-medida-list.component';
+import { UnidadeMedidaCreateComponent } from './components/unidadeMedida/unidade-medida-create/unidade-medida-create.component';
+import { UnidadeMedidaUpdateComponent } from './components/unidadeMedida/unidade-medida-update/unidade-medida-update.component';
+import { UnidadeMedidaDeleteComponent } from './components/unidadeMedida/unidade-medida-delete/unidade-medida-delete.component';
 
 /*import { ChamadoCreateComponent } from './components/chamado/chamado-create/chamado-create.component';
 import { ChamadoUpdateComponent } from './components/chamado/chamado-update/chamado-update.component';
@@ -71,6 +75,10 @@ import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-
     ObraListComponent,
     ObraCreateComponent,
     ObraUpdateComponent,
+    UnidadeMedidaListComponent,
+    UnidadeMedidaCreateComponent,
+    UnidadeMedidaUpdateComponent,
+    UnidadeMedidaDeleteComponent,
     /*ChamadoListComponent,
     ChamadoCreateComponent,
     ChamadoUpdateComponent,

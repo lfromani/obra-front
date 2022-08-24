@@ -1,0 +1,36 @@
+.container {
+    margin: auto;
+    width: 95%;    
+    border-radius: .4rem;
+    padding: 1rem 1rem 1rem 1rem;
+    background-color: white;   
+    word-wrap: break-word;   
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+h2 {
+    text-align: left;
+}
+
+.input-width-10 {    
+    flex-grow: 1;
+}
+
+.input-width-30 {
+    width: 30%;    
+}
+
+mat-divider {
+    margin-bottom: 20px;
+}
+
+button {
+    margin-right: 10px;
+}
+
+mat-form-field {    
+    border-width: 0px;
+}

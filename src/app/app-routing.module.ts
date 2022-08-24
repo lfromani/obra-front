@@ -15,6 +15,10 @@ import { ProdutoCreateComponent } from './components/produto/produto-create/prod
 import { ProdutoDeleteComponent } from './components/produto/produto-delete/produto-delete.component';
 import { ProdutoListComponent } from './components/produto/produto-list/produto-list.component';
 import { ProdutoUpdateComponent } from './components/produto/produto-update/produto-update.component';
+import { UnidadeMedidaCreateComponent } from './components/unidadeMedida/unidade-medida-create/unidade-medida-create.component';
+import { UnidadeMedidaDeleteComponent } from './components/unidadeMedida/unidade-medida-delete/unidade-medida-delete.component';
+import { UnidadeMedidaListComponent } from './components/unidadeMedida/unidade-medida-list/unidade-medida-list.component';
+import { UnidadeMedidaUpdateComponent } from './components/unidadeMedida/unidade-medida-update/unidade-medida-update.component';
 
 const routes: Routes = [
   { 
@@ -37,6 +41,11 @@ const routes: Routes = [
       { path: 'obras', component: ObraListComponent },
       { path: 'obras/create', component: ObraCreateComponent },
       { path: 'obras/update/:idObra', component: ObraUpdateComponent },
+
+      { path: 'unidadesmedida', component: UnidadeMedidaListComponent },
+      { path: 'unidadesmedida/create', component: UnidadeMedidaCreateComponent },
+      { path: 'unidadesmedida/update/:idUnidadeMedida', component: UnidadeMedidaUpdateComponent },
+      { path: 'unidadesmedida/delete/:idUnidadeMedida', component: UnidadeMedidaDeleteComponent },
     ]
   },
 ];
