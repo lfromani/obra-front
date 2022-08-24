@@ -18,6 +18,7 @@ export class ProdutoUpdateComponent implements OnInit {
     quantidade: '',
     preco: '',
     dataCadastro: '',
+    idUnidadeMedida: '',
   }
 
   descricao: FormControl = new FormControl(null, Validators.required);

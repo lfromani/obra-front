@@ -16,7 +16,7 @@
               matInput>
           </mat-form-field>
 
-          <mat-form-field fxFlex="70" appearance="outline">
+          <mat-form-field fxFlex="90" appearance="outline">
               <mat-label>Descrição</mat-label>
               <input 
               [(ngModel)]="produto.descricao"
@@ -28,35 +28,48 @@
           </mat-form-field>
         </div>
 
-        <mat-form-field appearance="outline">
-          <mat-label>Quantidade</mat-label>
-          <input 
-          [(ngModel)]="produto.quantidade"
-          name="quantidade"
-          type="number" 
-          matInput 
-          placeholder="0,00">
-        </mat-form-field>
+        <div fxLayout="row" fxLayoutGap="20px">
+          <mat-form-field fxFlex="20" appearance="outline">
+            <mat-label>Quantidade</mat-label>
+            <input 
+            [(ngModel)]="produto.quantidade"
+            name="quantidade"
+            type="number" 
+            matInput 
+            placeholder="0,00">
+          </mat-form-field>
 
-        <mat-form-field appearance="outline">
-          <mat-label>Preço</mat-label>
-          <input 
-          [(ngModel)]="produto.preco"
-          name="preco"
-          type="number" 
-          matInput 
-          placeholder="0,00">
-        </mat-form-field>
+          <mat-form-field fxFlex="40" appearance="outline">
+            <mat-label>Unidade Medida</mat-label>
+            <mat-select 
+              [(ngModel)]="produto.idUnidadeMedida" 
+              name="unidadeMedida"
+              [formControl]="unidadeMedida" 
+              required>
+              <mat-option *ngFor="let unidade of unidadesMedida" value="{{ unidade.idUnidadeMedida }}">{{ unidade.descricao }} ({{ unidade.sigla }})</mat-option> 
+            </mat-select>
+          </mat-form-field>
 
-        <mat-form-field appearance="outline">
-          <mat-label>Data Cadastro</mat-label>
-          <input 
-          [(ngModel)]="produto.dataCadastro"
-          name="dataCadastro"
-          type="date" 
-          matInput 
-          disabled="true">
-        </mat-form-field>
+          <mat-form-field fxFlex="20" appearance="outline">
+            <mat-label>Preço</mat-label>
+            <input 
+            [(ngModel)]="produto.preco"
+            name="preco"
+            type="number" 
+            matInput 
+            placeholder="0,00">
+          </mat-form-field>
+
+          <mat-form-field fxFlex="20" appearance="outline">
+            <mat-label>Data Cadastro</mat-label>
+            <input 
+            [(ngModel)]="produto.dataCadastro"
+            name="dataCadastro"
+            type="date" 
+            matInput 
+            disabled="true">
+          </mat-form-field>
+        </div>
       
         <button (click)="create()" [disabled]="!validaCampos()" class="mat-elevation-z2" mat-flat-button color="primary">Salvar</button>
         <button routerLink="../" class="mat-elevation-z2" mat-stroked-button color="warn">Cancelar</button>

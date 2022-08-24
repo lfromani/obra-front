@@ -18,6 +18,7 @@ export class ProdutoDeleteComponent implements OnInit {
     quantidade: '',
     preco: '',
     dataCadastro: '',
+    idUnidadeMedida: '',
   }
 
   constructor(

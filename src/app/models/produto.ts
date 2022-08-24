@@ -4,4 +4,5 @@ export interface Produto {
     quantidade: any;
     preco: any;
     dataCadastro: any;
+    idUnidadeMedida: any;
 }
