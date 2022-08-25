@@ -16,29 +16,34 @@
 
         <table mat-table [dataSource]="dataSource">
       
-          <ng-container matColumnDef="position">
+          <ng-container matColumnDef="idProduto">
             <th mat-header-cell *matHeaderCellDef> Código </th>
             <td mat-cell *matCellDef="let element"> {{element.idProduto}} </td>
           </ng-container>
       
-          <ng-container matColumnDef="name">
+          <ng-container matColumnDef="descricao">
             <th mat-header-cell *matHeaderCellDef> Descrição </th>
             <td mat-cell *matCellDef="let element"> {{element.descricao}} </td>
           </ng-container>
       
-          <ng-container matColumnDef="weight">
+          <ng-container matColumnDef="quantidade">
             <th mat-header-cell *matHeaderCellDef> Quantidade </th>
             <td mat-cell *matCellDef="let element"> {{element.quantidade}} </td>
           </ng-container>
       
-          <ng-container matColumnDef="symbol">
+          <ng-container matColumnDef="preco">
             <th mat-header-cell *matHeaderCellDef> Preço </th>
             <td mat-cell *matCellDef="let element"> {{element.preco}} </td>
           </ng-container>
 
-          <ng-container matColumnDef="date">
+          <ng-container matColumnDef="dataCadastro">
             <th mat-header-cell *matHeaderCellDef> Data Cadastro </th>
             <td mat-cell *matCellDef="let element"> {{element.dataCadastro}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="unidadeMedida">
+            <th mat-header-cell *matHeaderCellDef> Unidade Medida </th>
+            <td mat-cell *matCellDef="let element"> {{element.unidadeMedida}} </td>
           </ng-container>
 
           <ng-container matColumnDef="acoes">
@@ -46,9 +51,6 @@
             <td mat-cell *matCellDef="let element"> 
               <a routerLink="update/{{ element.idProduto }}">
                 <i class="material-icons edit">edit</i>
-              </a>
-              <a routerLink="delete/{{ element.idProduto }}">
-                <i class="material-icons delete">close</i>
               </a>
             </td>
           </ng-container>

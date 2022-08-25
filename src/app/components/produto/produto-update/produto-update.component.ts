@@ -3,7 +3,9 @@ import { FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Produto } from 'src/app/models/produto';
+import { UnidadeMedida } from 'src/app/models/unidadeMedida';
 import { ProdutoService } from 'src/app/services/produto.service';
+import { UnidadeMedidaService } from 'src/app/services/unidade-medida.service';
 
 @Component({
   selector: 'app-produto-update',
@@ -19,12 +21,19 @@ export class ProdutoUpdateComponent implements OnInit {
     preco: '',
     dataCadastro: '',
     idUnidadeMedida: '',
+    unidadeMedida: '',
   }
 
+  unidadesMedida: UnidadeMedida[] = [];
+
+  unidadeMedidaSalva = this.produto.unidadeMedida;
+
   descricao: FormControl = new FormControl(null, Validators.required);
+  unidadeMedida: FormControl = new FormControl(null, Validators.required);
 
   constructor(
     private service: ProdutoService,
+    private unidadeMedidaService: UnidadeMedidaService,
     private toast: ToastrService,
     private router: Router,
     private route: ActivatedRoute
@@ -33,12 +42,19 @@ export class ProdutoUpdateComponent implements OnInit {
   ngOnInit(): void {
     this.produto.idProduto = this.route.snapshot.paramMap.get('idProduto');
     this.findById();
+    this.findAllUnidadeMedida();
   }
 
   findById(): void {
     this.service.findById(this.produto.idProduto).subscribe(resposta => {
       this.produto = resposta;
     });
+  }
+
+  findAllUnidadeMedida(): void {
+    this.unidadeMedidaService.findAll().subscribe(resposta => {
+      this.unidadesMedida = resposta;
+    })
   }
 
   update(): void {
@@ -57,7 +73,7 @@ export class ProdutoUpdateComponent implements OnInit {
   }
 
   validaCampos(): boolean {
-    return this.descricao.valid;
+    return this.descricao.valid && this.unidadeMedida.valid;
   }
 
 }

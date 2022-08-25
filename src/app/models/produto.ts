@@ -5,4 +5,5 @@ export interface Produto {
     preco: any;
     dataCadastro: any;
     idUnidadeMedida: any;
+    unidadeMedida?: any;
 }

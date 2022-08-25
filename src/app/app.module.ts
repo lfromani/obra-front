@@ -52,6 +52,7 @@ import { UnidadeMedidaListComponent } from './components/unidadeMedida/unidade-m
 import { UnidadeMedidaCreateComponent } from './components/unidadeMedida/unidade-medida-create/unidade-medida-create.component';
 import { UnidadeMedidaUpdateComponent } from './components/unidadeMedida/unidade-medida-update/unidade-medida-update.component';
 import { UnidadeMedidaDeleteComponent } from './components/unidadeMedida/unidade-medida-delete/unidade-medida-delete.component';
+import { TwoDecimalNumberDirective } from './directives/two-decimal-number.directive';
 
 /*import { ChamadoCreateComponent } from './components/chamado/chamado-create/chamado-create.component';
 import { ChamadoUpdateComponent } from './components/chamado/chamado-update/chamado-update.component';
@@ -79,10 +80,7 @@ import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-
     UnidadeMedidaCreateComponent,
     UnidadeMedidaUpdateComponent,
     UnidadeMedidaDeleteComponent,
-    /*ChamadoListComponent,
-    ChamadoCreateComponent,
-    ChamadoUpdateComponent,
-    ChamadoReadComponent*/
+    TwoDecimalNumberDirective,
   ],
   imports: [
     BrowserModule,
