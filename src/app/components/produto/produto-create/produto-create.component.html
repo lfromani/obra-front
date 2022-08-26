@@ -45,7 +45,8 @@
               [(ngModel)]="produto.idUnidadeMedida" 
               name="unidadeMedida"
               [formControl]="unidadeMedida" 
-              required>
+              required
+              ng-currency>
               <mat-option *ngFor="let unidade of unidadesMedida" value="{{ unidade.idUnidadeMedida }}">{{ unidade.descricao }} ({{ unidade.sigla }})</mat-option> 
             </mat-select>
           </mat-form-field>
@@ -55,10 +56,10 @@
             <input 
             [(ngModel)]="produto.preco"
             name="preco"
-            type="number"     
+            type="text"     
             matInput      
             placeholder="0,00"
-            appTwoDecimalNumber>
+            appDuasCasasDecimais>
           </mat-form-field>
 
           <mat-form-field fxFlex="20" appearance="outline">

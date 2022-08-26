@@ -23,7 +23,7 @@ export class ClienteUpdateComponent implements OnInit {
 
   constructor(
     private service: ClienteService,
-    private toast: ToastrService,
+    private toastService: ToastrService,
     private router: Router,
     private route: ActivatedRoute
   ) { }
@@ -36,20 +36,22 @@ export class ClienteUpdateComponent implements OnInit {
   findById(): void {
     this.service.findById(this.cliente.idCliente).subscribe(resposta => {
       this.cliente = resposta;
-    });
+    }, ex => {
+      this.toastService.error(ex.error.error);
+    })
   }
 
   update(): void {
     this.service.update(this.cliente).subscribe(() => {
-      this.toast.success('Atualizado com sucesso!', 'Cliente');
+      this.toastService.success('Atualizado com sucesso!', 'Cliente');
       this.router.navigate(['clientes']);
     }, ex => {
       if (ex.error.errors) {
         ex.erro.errors.forEach(element => {
-          this.toast.error(element.message);
+          this.toastService.error(element.message);
         });
       } else {
-        this.toast.error(ex.error.message);
+        this.toastService.error(ex.error.message);
       }
     });
   }

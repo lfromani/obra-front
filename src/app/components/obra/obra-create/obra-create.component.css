@@ -6,3 +6,18 @@
     background-color: white;   
     word-wrap: break-word;   
 }
+
+mat-divider {
+    margin-bottom: 20px;
+}
+
+button {
+    margin-right: 10px;
+    margin-top: 4rem;     
+}
+
+.observacoes {
+    min-height: 1rem;
+    max-height: 5rem;
+    height: 5rem;    
+ }

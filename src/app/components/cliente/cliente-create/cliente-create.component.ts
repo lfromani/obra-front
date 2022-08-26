@@ -19,7 +19,7 @@ export class ClienteCreateComponent implements OnInit {
     dataCadastro: '',
   }
 
-  nome: FormControl = new FormControl(null, Validators.required);
+  nome: FormControl = new FormControl(null, Validators.required);  
 
   constructor(
     private service: ClienteService,

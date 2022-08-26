@@ -35,8 +35,8 @@ const routes: Routes = [
 
       { path: 'clientes', component: ClienteListComponent },
       { path: 'clientes/create', component: ClienteCreateComponent },
-      { path: 'clientes/update/:idProduto', component: ClienteUpdateComponent },
-      { path: 'clientes/delete/:idProduto', component: ClienteDeleteComponent },
+      { path: 'clientes/update/:idCliente', component: ClienteUpdateComponent },
+      { path: 'clientes/delete/:idCliente', component: ClienteDeleteComponent },
 
       { path: 'obras', component: ObraListComponent },
       { path: 'obras/create', component: ObraCreateComponent },

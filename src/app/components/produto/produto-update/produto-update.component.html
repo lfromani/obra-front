@@ -53,10 +53,11 @@
         <mat-form-field fxFlex="20" appearance="outline">
           <mat-label>Preço</mat-label>
           <input 
+          currency
           [(ngModel)]="produto.preco"
           name="preco"
           type="number" 
-          matInput 
+          matInput           
           placeholder="0,00">
         </mat-form-field>
 

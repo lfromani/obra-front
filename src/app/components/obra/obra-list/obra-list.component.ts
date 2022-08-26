@@ -14,7 +14,7 @@ export class ObraListComponent implements OnInit {
   ELEMENT_DATA: Obra[] = [];
   FILTERED_DATA: Obra[] = [];
 
-  displayedColumns: string[] = ['idObra', 'descricao', 'dataCadastro', 'idCliente', 'nomeCliente', 'observacoes', 'acoes'];
+  displayedColumns: string[] = ['idObra', 'descricao', 'status', 'dataCadastro', 'nomeCliente', 'acoes'];
   dataSource = new MatTableDataSource<Obra>(this.ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -51,15 +51,20 @@ export class ObraListComponent implements OnInit {
   }
 
   orderByStatus(status: any): void {
-    let list: Obra[] = [];
-    this.ELEMENT_DATA.forEach(element => {
-      /*if (element.status == status) {
-        list.push(element);
-      }*/
-    });
-    this.FILTERED_DATA = list;
-    this.dataSource = new MatTableDataSource<Obra>(this.FILTERED_DATA);
-    this.dataSource.paginator = this.paginator;
+    if (status === 9) {
+      this.dataSource = new MatTableDataSource<Obra>(this.ELEMENT_DATA);
+      this.dataSource.paginator = this.paginator;
+    } else {
+      let list: Obra[] = [];
+      this.ELEMENT_DATA.forEach(element => {
+        if (element.status == status) {
+          list.push(element);
+        }
+      });
+      this.FILTERED_DATA = list;
+      this.dataSource = new MatTableDataSource<Obra>(this.FILTERED_DATA);
+      this.dataSource.paginator = this.paginator;
+    }    
   }
 
 }

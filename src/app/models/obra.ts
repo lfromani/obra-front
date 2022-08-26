@@ -5,4 +5,5 @@ export interface Obra {
     observacoes?: any;
     idCliente: any;
     nomeCliente: string;
+    status?: any;
 }

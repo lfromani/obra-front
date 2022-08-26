@@ -21,13 +21,15 @@ export class ObraCreateComponent implements OnInit {
     observacoes: '',
     idCliente: '',
     nomeCliente: '',
+    status: '',
   }
 
   clientes: Cliente[] = [];
 
-  descricao: FormControl = new FormControl(null, [Validators.required])
-  observacoes: FormControl = new FormControl(null, [Validators.required])
-  cliente: FormControl = new FormControl(null, [Validators.required])
+  descricao: FormControl = new FormControl(null, [Validators.required]);
+  observacoes: FormControl = new FormControl(null, [Validators.required]);
+  cliente: FormControl = new FormControl(null, [Validators.required]);
+  status: FormControl = new FormControl(null, [Validators.required])
 
   constructor(
     private obraService: ObraService,
@@ -56,7 +58,7 @@ export class ObraCreateComponent implements OnInit {
   }
 
   validaCampos(): boolean {
-    return this.observacoes.valid && this.cliente.valid;
+    return this.descricao.valid && this.observacoes.valid && this.cliente.valid && this.status.valid;
   }
 
 }

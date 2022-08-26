@@ -53,7 +53,6 @@ export class ProdutoCreateComponent implements OnInit {
 
   create(): void {
     this.service.create(this.produto).subscribe(() => {
-      console.log(this.produto);
       this.toast.success('Salvo com sucesso!', 'Produto');
       this.router.navigate(['produtos']);
     }, ex => {

@@ -11,7 +11,7 @@ export class ClienteService {
 
   constructor(private http: HttpClient) { }
 
-  findById(id: any): Observable<Cliente> {
+  findById(id: any): Observable<Cliente> {    
     return this.http.get<Cliente>(`${API_CONFIG.baseUrl}/clientes/${id}`);
   }
 

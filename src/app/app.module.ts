@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { DEFAULT_CURRENCY_CODE, LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -52,11 +52,9 @@ import { UnidadeMedidaListComponent } from './components/unidadeMedida/unidade-m
 import { UnidadeMedidaCreateComponent } from './components/unidadeMedida/unidade-medida-create/unidade-medida-create.component';
 import { UnidadeMedidaUpdateComponent } from './components/unidadeMedida/unidade-medida-update/unidade-medida-update.component';
 import { UnidadeMedidaDeleteComponent } from './components/unidadeMedida/unidade-medida-delete/unidade-medida-delete.component';
-import { TwoDecimalNumberDirective } from './directives/two-decimal-number.directive';
 
-/*import { ChamadoCreateComponent } from './components/chamado/chamado-create/chamado-create.component';
-import { ChamadoUpdateComponent } from './components/chamado/chamado-update/chamado-update.component';
-import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-read.component';*/
+import ptBr from '@angular/common/locales/pt';
+import { DuasCasasDecimaisDirective } from './directive/duas-casas-decimais.directive';
 
 @NgModule({
   declarations: [
@@ -80,7 +78,7 @@ import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-
     UnidadeMedidaCreateComponent,
     UnidadeMedidaUpdateComponent,
     UnidadeMedidaDeleteComponent,
-    TwoDecimalNumberDirective,
+    DuasCasasDecimaisDirective    
   ],
   imports: [
     BrowserModule,
@@ -114,7 +112,11 @@ import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-
     }),
     NgxMaskModule.forRoot()
   ],
-  providers: [AuthInterceptorProvider],
+  providers: [
+    AuthInterceptorProvider,
+    { provide: LOCALE_ID, useValue: 'pt' },
+    { provide: DEFAULT_CURRENCY_CODE, useValue: 'BRL' },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

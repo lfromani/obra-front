@@ -15,7 +15,16 @@ export class ObraService {
     return this.http.get<Obra[]>(`${API_CONFIG.baseUrl}/obras`);
   }
 
+  findById(id: any): Observable<Obra> {
+    return this.http.get<Obra>(`${API_CONFIG.baseUrl}/obras/${id}`);
+  }
+
   create(obra: Obra): Observable<Obra> {
     return this.http.post<Obra>(`${API_CONFIG.baseUrl}/obras`, obra);
   }
+
+  update(obra: Obra): Observable<Obra> {
+    return this.http.put<Obra>(`${API_CONFIG.baseUrl}/obras/${obra.idObra}`, obra);
+  }
+  
 }
