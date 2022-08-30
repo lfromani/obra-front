@@ -7,6 +7,8 @@ import { ClienteListComponent } from './components/cliente/cliente-list/cliente-
 import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { MovimentoCreateComponent } from './components/movimento/movimento-create/movimento-create.component';
+import { MovimentoListComponent } from './components/movimento/movimento-list/movimento-list.component';
 import { NavComponent } from './components/nav/nav.component';
 import { ObraCreateComponent } from './components/obra/obra-create/obra-create.component';
 import { ObraListComponent } from './components/obra/obra-list/obra-list.component';
@@ -46,6 +48,9 @@ const routes: Routes = [
       { path: 'unidadesmedida/create', component: UnidadeMedidaCreateComponent },
       { path: 'unidadesmedida/update/:idUnidadeMedida', component: UnidadeMedidaUpdateComponent },
       { path: 'unidadesmedida/delete/:idUnidadeMedida', component: UnidadeMedidaDeleteComponent },
+
+      { path: 'movimentos', component: MovimentoListComponent },
+      { path: 'movimentos/create', component: MovimentoCreateComponent },
     ]
   },
 ];

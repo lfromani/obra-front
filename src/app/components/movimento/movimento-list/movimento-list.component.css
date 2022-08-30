@@ -1,0 +1,59 @@
+.container {    
+    margin: auto;
+    width: 95%;
+    border-radius: .4rem;
+    padding: 1rem 1rem 1rem 1rem;
+    background-color: white;
+}
+
+table {
+    width: 100%;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+#btnConsultar {
+    margin-top: 4px;
+    width: 6rem;
+    height: 3rem;
+}
+
+.mat-fab {
+    display: flex;
+    justify-content: center;    
+    width: 55px;
+    height: 55px;
+    margin-left: 48%;
+}
+
+.mat-column-idMovimento {
+    width: 10%;
+    text-align: right;
+    padding-right: 2rem;
+}
+
+.mat-column-obra {
+    width: 25%;
+    text-align: left;
+    padding-right: 2rem;
+}
+
+.mat-column-produto {
+    width: 25%;
+    text-align: left;
+    padding-right: 2rem;
+}
+
+.mat-column-quantidade {
+    width: 10%;
+    text-align: right;
+    padding-right: 2rem;
+}
+
+.mat-column-dataLancamento {
+    width: 15%;
+    text-align: left;
+    padding-right: 2rem;
+} 

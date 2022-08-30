@@ -52,9 +52,11 @@ import { UnidadeMedidaListComponent } from './components/unidadeMedida/unidade-m
 import { UnidadeMedidaCreateComponent } from './components/unidadeMedida/unidade-medida-create/unidade-medida-create.component';
 import { UnidadeMedidaUpdateComponent } from './components/unidadeMedida/unidade-medida-update/unidade-medida-update.component';
 import { UnidadeMedidaDeleteComponent } from './components/unidadeMedida/unidade-medida-delete/unidade-medida-delete.component';
+import { DuasCasasDecimaisDirective } from './directive/duas-casas-decimais.directive';
+import { MovimentoListComponent } from './components/movimento/movimento-list/movimento-list.component';
 
 import ptBr from '@angular/common/locales/pt';
-import { DuasCasasDecimaisDirective } from './directive/duas-casas-decimais.directive';
+import { MovimentoCreateComponent } from './components/movimento/movimento-create/movimento-create.component';
 
 @NgModule({
   declarations: [
@@ -78,7 +80,9 @@ import { DuasCasasDecimaisDirective } from './directive/duas-casas-decimais.dire
     UnidadeMedidaCreateComponent,
     UnidadeMedidaUpdateComponent,
     UnidadeMedidaDeleteComponent,
-    DuasCasasDecimaisDirective    
+    DuasCasasDecimaisDirective,
+    MovimentoListComponent,
+    MovimentoCreateComponent,
   ],
   imports: [
     BrowserModule,
@@ -106,7 +110,7 @@ import { DuasCasasDecimaisDirective } from './directive/duas-casas-decimais.dire
     MatListModule,
     MatCardModule,
     ToastrModule.forRoot({
-      timeOut: 5000,
+      timeOut: 3000,
       closeButton: true,
       progressBar: true
     }),
