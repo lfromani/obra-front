@@ -36,6 +36,7 @@ import { LoginComponent } from './components/login/login.component';
 import { ToastrModule } from 'ngx-toastr';
 import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 import { NgxMaskModule } from 'ngx-mask';
+import ptBr from '@angular/common/locales/pt';
 
 import { ProdutoCreateComponent } from './components/produto/produto-create/produto-create.component';
 import { ProdutoListComponent } from './components/produto/produto-list/produto-list.component';
@@ -54,8 +55,6 @@ import { UnidadeMedidaUpdateComponent } from './components/unidadeMedida/unidade
 import { UnidadeMedidaDeleteComponent } from './components/unidadeMedida/unidade-medida-delete/unidade-medida-delete.component';
 import { DuasCasasDecimaisDirective } from './directive/duas-casas-decimais.directive';
 import { MovimentoListComponent } from './components/movimento/movimento-list/movimento-list.component';
-
-import ptBr from '@angular/common/locales/pt';
 import { MovimentoCreateComponent } from './components/movimento/movimento-create/movimento-create.component';
 
 @NgModule({
