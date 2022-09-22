@@ -17,6 +17,10 @@ export class ClienteCreateComponent implements OnInit {
     nome: '',
     cpf: '',
     dataCadastro: '',
+    endereco: '',
+    telefone: '',
+    email: '',
+    dataNascimento: ''
   }
 
   nome: FormControl = new FormControl(null, Validators.required);  

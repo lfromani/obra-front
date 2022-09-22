@@ -5,8 +5,8 @@
 
       <mat-divider></mat-divider>
 
-      <div class="row">
-          <mat-form-field class="input-width-10" appearance="outline">
+      <div fxLayout="row" fxLayoutGap="20px">
+          <mat-form-field fxFlex="10" appearance="outline">
               <mat-label>Código</mat-label>
               <input 
               [(ngModel)]="cliente.idCliente"
@@ -16,7 +16,7 @@
               matInput>
           </mat-form-field>
   
-          <mat-form-field class="input-width-80" appearance="outline">
+          <mat-form-field fxFlex="50" appearance="outline">
               <mat-label>Nome</mat-label>
               <input 
               [(ngModel)]="cliente.nome"
@@ -25,28 +25,66 @@
               [disabled]="true"              
               matInput>
           </mat-form-field>
-      </div>        
 
-      <div class="row">
-        <mat-form-field class="input-width-30" appearance="outline">
-          <mat-label>CPF</mat-label>
+          <mat-form-field fxFlex="20" appearance="outline">
+            <mat-label>CPF</mat-label>
+            <input 
+            [(ngModel)]="cliente.cpf"
+            name="cpf"
+            type="number"
+            [disabled]="true"              
+            matInput>
+          </mat-form-field>
+
+          <mat-form-field fxFlex="20" appearance="outline">
+            <mat-label>Data Cadastro</mat-label>
+            <input 
+            [(ngModel)]="cliente.dataNascimento"
+            name="dataNascimento"
+            type="date" 
+            [disabled]="true"              
+            matInput>
+          </mat-form-field>
+      </div>
+
+      <div fxLayout="row" fxLayoutGap="20px">
+        <mat-form-field fxFlex="40" appearance="outline">
+          <mat-label>Endereço</mat-label>
           <input 
-          [(ngModel)]="cliente.cpf"
-          name="cpf"
-          type="number"
-          [disabled]="true"              
+          [(ngModel)]="cliente.endereco"
+          name="endereco"
+          [disabled]="true"
           matInput>
         </mat-form-field>
 
-        <mat-form-field class="input-width-30" appearance="outline">
+        <mat-form-field fxFlex="20" appearance="outline">
+          <mat-label>Telefone</mat-label>
+          <input 
+          [(ngModel)]="cliente.telefone"
+          name="telefone"
+          [disabled]="true"
+          matInput>
+        </mat-form-field>
+
+        <mat-form-field fxFlex="20" appearance="outline">
+          <mat-label>E-mail</mat-label>
+          <input 
+          [(ngModel)]="cliente.email"
+          name="email"
+          [disabled]="true"
+          matInput>
+        </mat-form-field>
+
+        <mat-form-field fxFlex="20" appearance="outline">
           <mat-label>Data Cadastro</mat-label>
           <input 
           [(ngModel)]="cliente.dataCadastro"
           name="dataCadastro"
-          type="date" 
-          [disabled]="true"              
+          type="text" 
+          [disabled]="true"
           matInput>
         </mat-form-field>
+
       </div>
     
       <button (click)="delete()" class="mat-elevation-z2" mat-flat-button color="primary">Deletar</button>

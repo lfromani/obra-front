@@ -3,4 +3,8 @@ export interface Cliente {
     nome: string;
     cpf: any;
     dataCadastro: any;
+    endereco: string;
+    telefone: string;
+    email: string;
+    dataNascimento: any;
 }

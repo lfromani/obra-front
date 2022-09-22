@@ -39,6 +39,41 @@
           </mat-form-field>
 
           <mat-form-field fxFlex="20" appearance="outline">
+            <mat-label>Data Nascimento</mat-label>
+            <input 
+            [(ngModel)]="cliente.dataNascimento"
+            name="dataNascimento"
+            type="date" 
+            matInput >
+          </mat-form-field>
+        </div>
+
+        <div fxLayout="row" fxLayoutGap="20px">
+          <mat-form-field fxFlex="40" appearance="outline">
+            <mat-label>Endereço</mat-label>
+            <input 
+            [(ngModel)]="cliente.endereco"
+            name="endereco"
+            matInput>
+          </mat-form-field>
+
+          <mat-form-field fxFlex="20" appearance="outline">
+            <mat-label>Telefone</mat-label>
+            <input 
+            [(ngModel)]="cliente.telefone"
+            name="telefone"
+            matInput>
+          </mat-form-field>
+
+          <mat-form-field fxFlex="20" appearance="outline">
+            <mat-label>E-mail</mat-label>
+            <input 
+            [(ngModel)]="cliente.email"
+            name="email"
+            matInput>
+          </mat-form-field>
+
+          <mat-form-field fxFlex="20" appearance="outline">
             <mat-label>Data Cadastro</mat-label>
             <input 
             [(ngModel)]="cliente.dataCadastro"
@@ -47,6 +82,7 @@
             matInput 
             [disabled]="true">
           </mat-form-field>
+
         </div>
       
         <button (click)="create()" [disabled]="!validaCampos()" class="mat-elevation-z2" mat-flat-button color="primary">Salvar</button>
