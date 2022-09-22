@@ -15,8 +15,8 @@ export class ProdutoDeleteComponent implements OnInit {
   produto: Produto = {
     idProduto: '',
     descricao: '',
-    quantidade: '',
-    preco: '',
+    quantidade: 0.0,
+    preco: 0.0,
     dataCadastro: '',
     idUnidadeMedida: '',
   }

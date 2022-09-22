@@ -2,10 +2,12 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { Observable } from 'rxjs';
 import { Obra } from 'src/app/models/obra';
 import { MovimentoService } from 'src/app/services/movimento.service';
 import { ObraService } from 'src/app/services/obra.service';
 import { MovimentoVO } from 'src/app/vos/movimentoVO';
+import { map, startWith } from 'rxjs/operators';
 
 @Component({
   selector: 'app-movimento-list',
@@ -16,7 +18,8 @@ import { MovimentoVO } from 'src/app/vos/movimentoVO';
 export class MovimentoListComponent implements OnInit {
 
   obras: Obra[] = [];
-  obra: FormControl = new FormControl(null, [Validators.required]);
+  obraFormControl = new FormControl();
+  filteredOptions: Observable<string[]>;
 
   ELEMENT_DATA: MovimentoVO[] = [];  
 
@@ -32,6 +35,14 @@ export class MovimentoListComponent implements OnInit {
 
   ngOnInit(): void {
     this.findAllObra();
+    
+    this.obras.forEach(element => {
+      let i = 0;
+      this.filteredOptions[i] = element.descricao;
+      i += 1;      
+    });
+
+    this.filteredOptions = this.obraFormControl.valueChanges.pipe(startWith(''), map(value => this._filter(value)));
   }
 
   findAllObra(): void {
@@ -40,8 +51,13 @@ export class MovimentoListComponent implements OnInit {
     })
   }
 
+  private _filter(value: string): string[] {
+    const filterValue = value.toLocaleLowerCase();
+    return this.obras.map(x => x.descricao).filter(option => option.toLowerCase().includes(filterValue));
+  }
+
   consultar(): void {
-    this.service.findByIdObra(this.obra.value).subscribe(resposta => {
+    this.service.findByIdObra(this.obraFormControl.value).subscribe(resposta => {
       this.ELEMENT_DATA = resposta;
       this.dataSource = new MatTableDataSource<MovimentoVO>(this.ELEMENT_DATA);
       this.dataSource.paginator = this.paginator;
@@ -49,7 +65,7 @@ export class MovimentoListComponent implements OnInit {
   }
 
   validaCampos(): boolean {
-    return this.obra.valid;
+    return this.obraFormControl.valid;
   }
 
 }

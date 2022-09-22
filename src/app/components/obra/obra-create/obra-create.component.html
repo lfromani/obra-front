@@ -47,7 +47,8 @@
           <mat-select
             [(ngModel)]="obra.idCliente"
             name="cliente"
-            [formControl]="cliente">
+            [formControl]="cliente"
+            required>
             <mat-option *ngFor="let cliente of clientes" value="{{ cliente.idCliente }}">{{ cliente.nome }}</mat-option>
           </mat-select>
         </mat-form-field>
@@ -71,6 +72,7 @@
                     name="observacoes"
                     [formControl]="observacoes"
                     class="observacoes" 
+                    required
                     matInput >
                 </textarea>
             </mat-form-field>

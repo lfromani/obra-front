@@ -59,9 +59,10 @@
 
           <mat-form-field fxFlex="20" appearance="outline">
             <mat-label>Telefone</mat-label>
-            <input 
+            <input
             [(ngModel)]="cliente.telefone"
             name="telefone"
+            type="tel"
             matInput>
           </mat-form-field>
 
@@ -69,8 +70,13 @@
             <mat-label>E-mail</mat-label>
             <input 
             [(ngModel)]="cliente.email"
+            [formControl]="emailFormControl"
             name="email"
+            type="email"
             matInput>
+            <mat-error *ngIf="emailFormControl.hasError('email')">
+              Informe um e-mail válido
+            </mat-error>
           </mat-form-field>
 
           <mat-form-field fxFlex="20" appearance="outline">

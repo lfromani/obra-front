@@ -24,6 +24,7 @@ export class ClienteUpdateComponent implements OnInit {
   }
 
   nome: FormControl = new FormControl(null, Validators.required);
+  emailFormControl: FormControl = new FormControl(null, Validators.email);
 
   constructor(
     private service: ClienteService,

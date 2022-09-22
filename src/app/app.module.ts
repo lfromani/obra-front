@@ -1,9 +1,13 @@
-import { DEFAULT_CURRENCY_CODE, LOCALE_ID, NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import localept from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
+registerLocaleData(localept, 'pt');
 
 // Para trabalhar com formulários no Angular 12
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
@@ -27,6 +31,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 // Componentes do projeto
 import { NavComponent } from './components/nav/nav.component';
@@ -108,6 +113,7 @@ import { MovimentoCreateComponent } from './components/movimento/movimento-creat
     MatIconModule,
     MatListModule,
     MatCardModule,
+    MatAutocompleteModule,
     ToastrModule.forRoot({
       timeOut: 3000,
       closeButton: true,
@@ -117,8 +123,7 @@ import { MovimentoCreateComponent } from './components/movimento/movimento-creat
   ],
   providers: [
     AuthInterceptorProvider,
-    { provide: LOCALE_ID, useValue: 'pt' },
-    { provide: DEFAULT_CURRENCY_CODE, useValue: 'BRL' },
+    { provide: LOCALE_ID, useValue: "pt" }
   ],
   bootstrap: [AppComponent]
 })

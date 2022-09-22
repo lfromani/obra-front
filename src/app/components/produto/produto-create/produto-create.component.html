@@ -44,9 +44,7 @@
             <mat-select 
               [(ngModel)]="produto.idUnidadeMedida" 
               name="unidadeMedida"
-              [formControl]="unidadeMedida" 
-              required
-              ng-currency>
+              [formControl]="unidadeMedida">
               <mat-option *ngFor="let unidade of unidadesMedida" value="{{ unidade.idUnidadeMedida }}">{{ unidade.descricao }} ({{ unidade.sigla }})</mat-option> 
             </mat-select>
           </mat-form-field>

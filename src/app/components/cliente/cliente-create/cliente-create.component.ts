@@ -23,7 +23,8 @@ export class ClienteCreateComponent implements OnInit {
     dataNascimento: ''
   }
 
-  nome: FormControl = new FormControl(null, Validators.required);  
+  nome: FormControl = new FormControl(null, Validators.required);
+  emailFormControl: FormControl = new FormControl(null, Validators.email);
 
   constructor(
     private service: ClienteService,

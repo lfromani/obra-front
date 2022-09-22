@@ -1,22 +1,27 @@
 <div class="container mat-elevation-z6">
 
     <h2>Movimentos</h2>
+
+    <button routerLink="create" class="mat-elevation-z2" mat-raised-button color="primary">Novo</button>
+
+    <br><br>
   
     <div fxLayout="row" fxLayoutGap="10px">
         <mat-form-field fxFlex="40" appearance="outline">
             <mat-label>Obra</mat-label>
-            <mat-select
-            name="obra"
-            [formControl]="obra">
-            <mat-option *ngFor="let obra of obras" value="{{ obra.idObra }}">{{ obra.descricao }}</mat-option>
-            </mat-select>
-        </mat-form-field>
-
-        <button id="btnConsultar" (click)="consultar()" [disabled]="!validaCampos()" class="mat-elevation-z2" mat-raised-button color="primary">Consultar</button>   
+            <input 
+                matInput                
+                aria-label="Selecione"
+                matInput
+                [formControl]="obraFormControl"
+                [matAutocomplete]="auto">
+            <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                    {{ option }}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>        
         
-        <button routerLink="create" mat-fab color="primary">
-            <mat-icon>add</mat-icon>
-        </button>
     </div>
         
     <div class="mat-elevation-z2">

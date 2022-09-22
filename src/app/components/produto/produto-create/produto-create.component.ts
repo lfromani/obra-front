@@ -13,23 +13,12 @@ import { UnidadeMedidaService } from 'src/app/services/unidade-medida.service';
   styleUrls: ['./produto-create.component.css']
 })
 export class ProdutoCreateComponent implements OnInit {
-  
-  threeDecPrecisionDecimalMaskOptions = {
-    align: 'right',
-    allowNegative: false,
-    decimalSeparator: ',',
-    precision: 2,
-    prefix: '',
-    suffix: '',
-    thousandsSeparator: '.',
-    valueMode: 'standard',
-  };
 
   produto: Produto = {
     idProduto: '',
     descricao: '',
-    quantidade: '',
-    preco: '',
+    quantidade: 0.0,
+    preco: 0.0,
     dataCadastro: '',
     idUnidadeMedida: '',
     unidadeMedida: '',
