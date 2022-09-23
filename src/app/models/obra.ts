@@ -7,3 +7,10 @@ export interface Obra {
     nomeCliente: string;
     status?: any;
 }
+
+export function filterOptionsByLabel(obras: Obra[], descricao: string): Obra[] {
+    const value = descricao.trim().toLowerCase();
+    return obras.filter((option: Obra) => {
+      return option.descricao.toLowerCase().includes(value);
+    });
+  }

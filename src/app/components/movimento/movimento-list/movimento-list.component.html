@@ -15,11 +15,16 @@
                 matInput
                 [formControl]="obraFormControl"
                 [matAutocomplete]="auto">
-            <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onSelectionChanged($event)">
-                <mat-option *ngFor="let option of (filteredObras | async)" [value]="option.idObra">
-                    {{ option.idObra }} {{ option.descricao }}
+            <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayLabelFn" (optionSelected)="consultar($event.option.value)">
+                <mat-option *ngFor="let obra of filteredOptions | async" [value]="obra">
+                    {{ obra.idObra }} - {{ obra.descricao }}
                 </mat-option>
             </mat-autocomplete>
+            <mat-icon matSuffix
+                *ngIf="obraFormControl.value"
+                (click)="obraFormControl.setValue('')">
+                close
+            </mat-icon>
         </mat-form-field>        
         
     </div>
