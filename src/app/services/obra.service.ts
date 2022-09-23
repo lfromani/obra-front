@@ -26,5 +26,9 @@ export class ObraService {
   update(obra: Obra): Observable<Obra> {
     return this.http.put<Obra>(`${API_CONFIG.baseUrl}/obras/${obra.idObra}`, obra);
   }
+
+  async findAllPromise(): Promise<Obra[]> {
+    return await this.http.get<Obra[]>(`${API_CONFIG.baseUrl}/obras`).toPromise();
+  }
   
 }

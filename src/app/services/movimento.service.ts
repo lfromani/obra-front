@@ -17,7 +17,6 @@ export class MovimentoService {
   }
 
   create(movimento: MovimentoDTO): Observable<MovimentoDTO> {
-    console.log(movimento);    
     return this.http.post<MovimentoDTO>(`${API_CONFIG.baseUrl}/movimentos`, movimento);
   }
   

@@ -10,7 +10,6 @@ export class DuasCasasDecimaisDirective {
   }
   @HostListener('keydown', ['$event'])
   onKeyDown(event: KeyboardEvent) {
-    console.log(this.el.nativeElement.value);
     if (this.specialKeys.indexOf(event.key) !== -1) {
       return;
     }
