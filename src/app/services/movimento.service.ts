@@ -19,5 +19,9 @@ export class MovimentoService {
   create(movimento: MovimentoDTO): Observable<MovimentoDTO> {
     return this.http.post<MovimentoDTO>(`${API_CONFIG.baseUrl}/movimentos`, movimento);
   }
+
+  findMovimentosHome(): Observable<any[]> {
+    return this.http.get<any[]>(`${API_CONFIG.baseUrl}/movimentos`);
+  }
   
 }

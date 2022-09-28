@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MovimentoService } from 'src/app/services/movimento.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  listaMovimentos: any[] = [];
+
+  constructor(
+    private service: MovimentoService,
+  ) { }
 
   ngOnInit(): void {
+    this.service.findMovimentosHome().subscribe(data => {
+      this.listaMovimentos = data;
+    });
+
+    console.log(this.listaMovimentos);
+
   }
 
 }
