@@ -32,11 +32,11 @@
         <mat-form-field fxFlex="20" appearance="outline">
           <mat-label>Quantidade</mat-label>
           <input 
-          [(ngModel)]="produto.quantidade"
+          currencyMask         
           name="quantidade"
-          type="number" 
-          matInput 
-          placeholder="0,00">
+          [(ngModel)]="produto.quantidade" 
+          [options]="{ prefix: '', thousands: '.', decimal: ',' }"           
+          matInput>
         </mat-form-field>
 
         <mat-form-field fxFlex="40" appearance="outline">
@@ -45,7 +45,7 @@
             [disabled]="true"
             [(ngModel)]="produto.idUnidadeMedida" 
             name="unidadeMedida"
-            [formControl]="unidadeMedida" >
+            [formControl]="unidadeMedida">
             <mat-option *ngFor="let unidade of unidadesMedida" value="{{ unidade.idUnidadeMedida }}">{{ unidade.descricao }} ({{ unidade.sigla }})</mat-option> 
           </mat-select>
         </mat-form-field>
@@ -53,12 +53,11 @@
         <mat-form-field fxFlex="20" appearance="outline">
           <mat-label>Preço</mat-label>
           <input 
-          currency
+          currencyMask      
+          name="preco"      
           [(ngModel)]="produto.preco"
-          name="preco"
-          type="number" 
-          matInput           
-          placeholder="0,00">
+          [options]="{ prefix: '', thousands: '.', decimal: ',' }"
+          matInput >
         </mat-form-field>
 
         <mat-form-field fxFlex="20" appearance="outline">

@@ -41,7 +41,7 @@ import { LoginComponent } from './components/login/login.component';
 import { ToastrModule } from 'ngx-toastr';
 import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 import { NgxMaskModule } from 'ngx-mask';
-import ptBr from '@angular/common/locales/pt';
+import { CurrencyMaskModule } from "ng2-currency-mask";
 
 import { ProdutoCreateComponent } from './components/produto/produto-create/produto-create.component';
 import { ProdutoListComponent } from './components/produto/produto-list/produto-list.component';
@@ -114,8 +114,9 @@ import { MovimentoCreateComponent } from './components/movimento/movimento-creat
     MatListModule,
     MatCardModule,
     MatAutocompleteModule,
+    CurrencyMaskModule,
     ToastrModule.forRoot({
-      timeOut: 3000,
+      timeOut: 4000,
       closeButton: true,
       progressBar: true
     }),

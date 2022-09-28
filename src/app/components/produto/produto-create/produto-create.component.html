@@ -1,3 +1,5 @@
+<script src="angular-input-masks-standalone.min.js"></script>
+
 <div class="container mat-elevation-z6">
     
     <form class="form">
@@ -31,12 +33,12 @@
         <div fxLayout="row" fxLayoutGap="20px">
           <mat-form-field fxFlex="20" appearance="outline">
             <mat-label>Quantidade</mat-label>
-            <input 
-            [(ngModel)]="produto.quantidade"
-            name="quantidade"
-            type="number" 
-            matInput 
-            placeholder="0,00">
+            <input    
+            currencyMask   
+            name="quantidade"      
+            [(ngModel)]="produto.quantidade" 
+            [options]="{ prefix: '', thousands: '.', decimal: ',' }"           
+            matInput >
           </mat-form-field>
 
           <mat-form-field fxFlex="40" appearance="outline">
@@ -52,12 +54,11 @@
           <mat-form-field fxFlex="20" appearance="outline">
             <mat-label>Preço</mat-label>
             <input 
-            [(ngModel)]="produto.preco"
+            currencyMask   
             name="preco"
-            type="text"     
-            matInput      
-            placeholder="0,00"
-            appDuasCasasDecimais>
+            [(ngModel)]="produto.preco"
+            [options]="{ prefix: '', thousands: '.', decimal: ',' }"
+            matInput >
           </mat-form-field>
 
           <mat-form-field fxFlex="20" appearance="outline">

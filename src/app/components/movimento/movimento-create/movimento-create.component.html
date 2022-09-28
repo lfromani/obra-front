@@ -39,12 +39,12 @@
           <mat-form-field fxFlex="20" appearance="outline">
             <mat-label>Quantidade</mat-label>
             <input 
+            currencyMask
             [(ngModel)]="movimento.quantidade"
             name="quantidade"
-            [formControl]="quantidade"
-            type="number" 
-            matInput 
-            placeholder="0,00">
+            [formControl]="quantidade"                                    
+            [options]="{ prefix: '', thousands: '.', decimal: ',' }" 
+            matInput >
           </mat-form-field>
 
         </div>
