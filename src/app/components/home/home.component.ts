@@ -15,11 +15,11 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.service.findMovimentosHome().subscribe(data => {
+    /*this.service.findMovimentosHome().subscribe(data => {
       this.listaMovimentos = data;
     });
 
-    console.log(this.listaMovimentos);
+    console.log(this.listaMovimentos);*/
 
   }
 
