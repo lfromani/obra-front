@@ -8,7 +8,6 @@ import { MovimentoService } from 'src/app/services/movimento.service';
 import { ObraService } from 'src/app/services/obra.service';
 import { MovimentoVO } from 'src/app/vos/movimentoVO';
 import { map, startWith } from 'rxjs/operators';
-import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 
 @Component({
   selector: 'app-movimento-list',
@@ -18,6 +17,7 @@ import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 
 export class MovimentoListComponent implements OnInit {
 
+  totalPreco: any;
   obras: Obra[] = [];
   optionSelected = new EventEmitter<Obra>();
 
@@ -26,7 +26,7 @@ export class MovimentoListComponent implements OnInit {
 
   ELEMENT_DATA: MovimentoVO[] = [];  
 
-  displayedColumns: string[] = ['idMovimento', 'obra', 'produto', 'quantidade', 'dataLancamento'];
+  displayedColumns: string[] = ['idMovimento', 'obra', 'produto', 'quantidade', 'preco', 'dataLancamento'];
   dataSource = new MatTableDataSource<MovimentoVO>(this.ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -64,6 +64,8 @@ export class MovimentoListComponent implements OnInit {
       this.ELEMENT_DATA = resposta;
       this.dataSource = new MatTableDataSource<MovimentoVO>(this.ELEMENT_DATA);
       this.dataSource.paginator = this.paginator;
+
+      this.totalPreco = resposta.map(x => x.preco).reduce((acc, value) => acc + value, 0);
     })
   }
 

@@ -4,4 +4,5 @@ export interface MovimentoDTO {
     produto?: any;
     quantidade?: any;
     dataLancamento?: any;
+    preco?: any;
 }

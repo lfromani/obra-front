@@ -4,4 +4,5 @@ export interface MovimentoVO {
     produto?: any;
     quantidade?: any;
     dataLancamento?: any;
+    preco?: any;
 }

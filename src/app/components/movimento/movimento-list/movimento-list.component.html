@@ -35,31 +35,43 @@
     
         <ng-container matColumnDef="idMovimento">
             <th mat-header-cell *matHeaderCellDef> Movimento </th>
-            <td mat-cell *matCellDef="let element"> {{element.idMovimento}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.idMovimento}} </td> 
+            <td mat-footer-cell *matFooterCellDef>Total</td>
         </ng-container>
     
         <ng-container matColumnDef="obra">
             <th mat-header-cell *matHeaderCellDef> Obra </th>
             <td mat-cell *matCellDef="let element"> {{element.obra}} </td>
+            <td mat-footer-cell *matFooterCellDef></td>
         </ng-container>
 
         <ng-container matColumnDef="produto">
             <th mat-header-cell *matHeaderCellDef> Produto </th>
             <td mat-cell *matCellDef="let element"> {{element.produto}} </td>
+            <td mat-footer-cell *matFooterCellDef></td>
         </ng-container>
 
         <ng-container matColumnDef="quantidade">
             <th mat-header-cell *matHeaderCellDef> Quantidade </th>
             <td mat-cell *matCellDef="let element"> {{element.quantidade | number:'1.2-2' }} </td>
+            <td mat-footer-cell *matFooterCellDef></td>
+        </ng-container>
+
+        <ng-container matColumnDef="preco">
+            <th mat-header-cell *matHeaderCellDef> Preço </th>
+            <td mat-cell *matCellDef="let element"> {{element.preco | number:'1.2-2' }} </td>
+            <td mat-footer-cell *matFooterCellDef> {{totalPreco | number:'1.2-2'}} </td>
         </ng-container>
 
         <ng-container matColumnDef="dataLancamento">
             <th mat-header-cell *matHeaderCellDef> Data Lançamento </th>
             <td mat-cell *matCellDef="let element"> {{element.dataLancamento}} </td>
+            <td mat-footer-cell *matFooterCellDef></td>
         </ng-container>
     
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        <tr mat-footer-row *matFooterRowDef="displayedColumns"></tr>
         </table>
         
         <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"

@@ -21,6 +21,7 @@ export class MovimentoCreateComponent implements OnInit {
     obra: '',
     produto: '',
     quantidade: '',
+    preco: '',
     dataLancamento: '',
   }
 
