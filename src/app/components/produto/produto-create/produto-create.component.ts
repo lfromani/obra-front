@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { UntypedFormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Produto } from 'src/app/models/produto';
@@ -26,8 +26,8 @@ export class ProdutoCreateComponent implements OnInit {
 
   unidadesMedida: UnidadeMedida[] = [];
 
-  descricao: FormControl = new FormControl(null, Validators.required);
-  unidadeMedida: FormControl = new FormControl(null, Validators.required);
+  descricao: UntypedFormControl = new UntypedFormControl(null, Validators.required);
+  unidadeMedida: UntypedFormControl = new UntypedFormControl(null, Validators.required);
 
   constructor(
     private service: ProdutoService,

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { UntypedFormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Cliente } from 'src/app/models/cliente';
@@ -23,8 +23,8 @@ export class ClienteCreateComponent implements OnInit {
     dataNascimento: ''
   }
 
-  nome: FormControl = new FormControl(null, Validators.required);
-  emailFormControl: FormControl = new FormControl(null, Validators.email);
+  nome: UntypedFormControl = new UntypedFormControl(null, Validators.required);
+  emailFormControl: UntypedFormControl = new UntypedFormControl(null, Validators.email);
 
   constructor(
     private service: ClienteService,

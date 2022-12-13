@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, ViewChild, EventEmitter } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { UntypedFormControl, Validators } from '@angular/forms';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Observable } from 'rxjs';
@@ -21,7 +21,7 @@ export class MovimentoListComponent implements OnInit {
   obras: Obra[] = [];
   optionSelected = new EventEmitter<Obra>();
 
-  obraFormControl = new FormControl();  
+  obraFormControl = new UntypedFormControl();  
   filteredOptions!: Observable<Obra[]>;  
 
   ELEMENT_DATA: MovimentoVO[] = [];  

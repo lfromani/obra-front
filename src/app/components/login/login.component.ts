@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { UntypedFormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Credenciais } from 'src/app/models/credenciais';
@@ -17,8 +17,8 @@ export class LoginComponent implements OnInit {
     senha: ''
   }
 
-  login = new FormControl(null, Validators.required);
-  senha = new FormControl(null, Validators.minLength(3));
+  login = new UntypedFormControl(null, Validators.required);
+  senha = new UntypedFormControl(null, Validators.minLength(3));
 
   constructor(
     private toast: ToastrService,

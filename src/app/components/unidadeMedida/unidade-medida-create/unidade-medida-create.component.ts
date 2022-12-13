@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UnidadeMedida } from 'src/app/models/unidadeMedida';
-import { FormControl, Validators } from '@angular/forms';
+import { UntypedFormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { UnidadeMedidaService } from 'src/app/services/unidade-medida.service';
@@ -18,8 +18,8 @@ export class UnidadeMedidaCreateComponent implements OnInit {
     sigla: '',
   }
 
-  descricao: FormControl = new FormControl(null, Validators.required);
-  sigla: FormControl = new FormControl(null, Validators.required);
+  descricao: UntypedFormControl = new UntypedFormControl(null, Validators.required);
+  sigla: UntypedFormControl = new UntypedFormControl(null, Validators.required);
 
   constructor(
     private service: UnidadeMedidaService,

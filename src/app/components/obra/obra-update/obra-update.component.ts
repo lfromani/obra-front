@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { UntypedFormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Cliente } from 'src/app/models/cliente';
@@ -26,10 +26,10 @@ export class ObraUpdateComponent implements OnInit {
 
   clientes: Cliente[] = [];
 
-  descricao: FormControl = new FormControl(null, [Validators.required]);
-  observacoes: FormControl = new FormControl(null, [Validators.required]);
-  cliente: FormControl = new FormControl(null, [Validators.required]);
-  status: FormControl = new FormControl(null, [Validators.required])
+  descricao: UntypedFormControl = new UntypedFormControl(null, [Validators.required]);
+  observacoes: UntypedFormControl = new UntypedFormControl(null, [Validators.required]);
+  cliente: UntypedFormControl = new UntypedFormControl(null, [Validators.required]);
+  status: UntypedFormControl = new UntypedFormControl(null, [Validators.required])
 
   constructor(
     private obraService: ObraService,

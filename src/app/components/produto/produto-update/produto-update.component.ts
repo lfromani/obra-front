@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { UntypedFormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Produto } from 'src/app/models/produto';
@@ -28,8 +28,8 @@ export class ProdutoUpdateComponent implements OnInit {
 
   unidadeMedidaSalva = this.produto.unidadeMedida;
 
-  descricao: FormControl = new FormControl(null, Validators.required);
-  unidadeMedida: FormControl = new FormControl(null, Validators.required);
+  descricao: UntypedFormControl = new UntypedFormControl(null, Validators.required);
+  unidadeMedida: UntypedFormControl = new UntypedFormControl(null, Validators.required);
 
   constructor(
     private service: ProdutoService,

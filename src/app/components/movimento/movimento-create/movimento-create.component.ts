@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { UntypedFormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { MovimentoDTO } from 'src/app/dtos/movimentoDTO';
@@ -28,9 +28,9 @@ export class MovimentoCreateComponent implements OnInit {
   obras: Obra[] = [];
   produtos: Produto[] = [];
 
-  obra: FormControl = new FormControl(null, [Validators.required]);
-  produto: FormControl = new FormControl(null, [Validators.required]);
-  quantidade: FormControl = new FormControl(null, [Validators.required]);
+  obra: UntypedFormControl = new UntypedFormControl(null, [Validators.required]);
+  produto: UntypedFormControl = new UntypedFormControl(null, [Validators.required]);
+  quantidade: UntypedFormControl = new UntypedFormControl(null, [Validators.required]);
 
   constructor(
     private obraService: ObraService,
